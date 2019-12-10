@@ -1,4 +1,4 @@
-﻿namespace WhatsNewInCSharp8
+﻿namespace NewCSharp8Features
 {
 	public interface IAnimal { }
 

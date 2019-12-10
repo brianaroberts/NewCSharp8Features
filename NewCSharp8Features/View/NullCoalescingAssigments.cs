@@ -1,30 +1,30 @@
 ﻿using System;
 
-namespace WhatsNewInCSharp8
+namespace NewCSharp8Features
 {
    // https://github.com/dotnet/csharplang/blob/master/proposals/csharp-8.0/null-coalescing-assignment.md
    public static class NullCoalescingAssigments
    {
-	  public static void Demo()
-	  {
-		 string? GetName() => "Jason";
+		public static void Demo()
+		{
+			string? GetName() => "Jason";
 
-		 string? GetNullName() => null;
+			string? GetNullName() => null;
 
-		 var name = GetNullName();
+			var name = GetNullName();
 
-		 // Old way:
-		 /*
-		 if (name == null)
-		 {
-			 name = GetName();
-		 }
-		 */
+			// Old way:
+			/*
+			if (name == null)
+			{
+				name = GetName();
+			}
+			*/
 
-		 // New way:
-		 name ??= GetName();
+			// New way:
+			name ??= GetName();
 
-		 Console.WriteLine(name);
-	  }
+			Console.WriteLine(name);
+		}
    }
 }

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace WhatsNewInCSharp8
+namespace NewCSharp8Features
 {
 	public sealed class None
 	{

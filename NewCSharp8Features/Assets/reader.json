@@ -1,0 +1,19 @@
+{
+  "teamName": "Dallas Cowboys",
+  "yearCreated": 1960,
+  "numberOfSuperbowls": 5,
+  "teamMates": [
+	{
+	  "name": "Dak Prescott",
+	  "jerseyNumber": 4
+	},
+	{
+	  "name": "Tony Pollard",
+	  "jerseyNumber": 20
+	},
+	{
+	  "name": "Devin Smith",
+	  "jerseyNumber": 15
+	}
+  ]
+}

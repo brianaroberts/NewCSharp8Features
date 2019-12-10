@@ -1,12 +1,12 @@
 ﻿using System;
 
-namespace WhatsNewInCSharp8
+namespace NewCSharp8Features
 {
-   public static class RangesAndIndexes
-   {
-	  // https://github.com/dotnet/csharplang/blob/master/proposals/csharp-8.0/ranges.md
-	  public static void Demo()
-	  {
+	public static class RangesAndIndexes
+	{
+		// https://github.com/dotnet/csharplang/blob/master/proposals/csharp-8.0/ranges.md
+		public static void Demo()
+		{
 			var values = new int[] { 3, 1, 4, 1, 5, 9, 2, 6, 5 };
 			var aRange = 2..5; // [2] up to and including [4]
 
@@ -40,6 +40,6 @@ namespace WhatsNewInCSharp8
 			rangeSlice[0] = 22;
 			Console.WriteLine($"Changing rangeSlice[0]: {values[0]}");
 
-	  }
-   }
+		}
+	}
 }

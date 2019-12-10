@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace WhatsNewInCSharp8
+namespace NewCSharp8Features
 {
 	public sealed class AsynchronousRandom 
 		: IAsyncEnumerable<int>
@@ -17,9 +17,10 @@ namespace WhatsNewInCSharp8
 			var random = new Random();
 
 			for(var i = 0; i < this.count; i++)
-			{
+			{				
+				//await Task.Delay(random.Next(10, 200));
+				await Task.Delay(1000);
 				yield return random.Next();
-				await Task.Delay(random.Next(100, 1000));
 			}
 		}
 	}
