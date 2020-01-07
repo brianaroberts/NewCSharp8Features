@@ -14,7 +14,7 @@ namespace NewCSharp8Features
 
 			var options = new JsonWriterOptions
 			{
-				Indented = true
+				Indented = true				
 			};
 
 			var buffer = new ArrayBufferWriter<byte>();
@@ -79,7 +79,7 @@ namespace NewCSharp8Features
 			//	that with options though. 
 			var options = new JsonSerializerOptions()
 			{
-				PropertyNamingPolicy = JsonNamingPolicy.CamelCase
+				PropertyNamingPolicy = JsonNamingPolicy.CamelCase				
 			};
 
 			var readBytes = File.ReadAllBytes(".\\assets\\reader.json");

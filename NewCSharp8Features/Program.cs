@@ -8,44 +8,48 @@ namespace NewCSharp8Features
 	{
 		static int ThreadId => Thread.CurrentThread.ManagedThreadId;
 
-		//static void Main()
-		//{
-		//	//Patterns.Demo();
-		//	//Patterns.DemoWithErrors();
+		static void Main()
+		{
+			//NullRefs.Demo();
+			//NullRefs.DemoReflection();
 
-		//	//NullRefs.Demo();
-		//	//NullRefs.DemoReflection();
+			//Patterns.Demo(); Patterns.Demo(); Patterns.Demo(); Patterns.Demo();
+			//Patterns.DemoWithErrors();
 
-		//	//Using.Demo();
-		//	//Using.EnhancedDemo();
+			//RangesAndIndexes.Demo();
 
-		//	//RangesAndIndexes.Demo();
+			//STREAMS BELOW
 
-		//	//InterfaceMembers.Demo();
+			//CoreJson.DemoJsonReader();
+			//CoreJson.DemoJsonWriter();
+			//CoreJson.DemoJsonSerializer();
 
-		//	//NullCoalescingAssigments.Demo();
+			//Using.Demo();
+			//Using.EnhancedDemo();
 
-		//	//StaticLocalFunctions.Demo();
+			//InterfaceMembers.Demo();
 
-		//	//StringInterpolation.Demo();
+			//NullCoalescingAssigments.Demo();
 
-		//	//CoreJson.DemoJsonReader();
-		//	//CoreJson.DemoJsonWriter();
-		//	//CoreJson.DemoJsonSerializer();
+			//StaticLocalFunctions.Demo();
 
-		//	Console.WriteLine("Press any key to exit"); 
-		//	Console.ReadKey(); 
-		//}
+			//StringInterpolation.Demo();
 
-		static async Task Main() {
-			await Program.AsyncDisposableDemo();
-			await Program.AsyncStreamsDemo();
+			Console.WriteLine("Press any key to exit");
+			Console.ReadKey();
 		}
 
+		//static async Task Main()
+		//{
+		//	await Program.AsyncDisposableDemo();
+		//	await Program.AsyncStreamsDemo();
 
+		//	Console.WriteLine("Press any key to exit");
+		//	Console.ReadKey();
+		//}
 
-	// https://github.com/dotnet/csharplang/blob/master/proposals/csharp-8.0/async-streams.md
-	private static async Task AsyncDisposableDemo()
+		// https://github.com/dotnet/csharplang/blob/master/proposals/csharp-8.0/async-streams.md
+		private static async Task AsyncDisposableDemo()
 		{
 			await using (var _ = new AsyncDisposableService())
 				await Console.Out.WriteLineAsync(
@@ -57,9 +61,10 @@ namespace NewCSharp8Features
 		{
 			Console.WriteLine($"Enumerating Random Number Generator on thread {ThreadId}...");
 
-			await foreach (var value in new AsynchronousRandom(100))
+			await foreach (var value in new AsynchronousRandom(10))
 			{
 				await Console.Out.WriteLineAsync($"[{ThreadId}]:{value.ToString()}");
+				await Task.Delay(100);
 			}
 		}
 

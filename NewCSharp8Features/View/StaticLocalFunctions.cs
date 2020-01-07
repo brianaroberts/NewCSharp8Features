@@ -11,7 +11,8 @@ namespace NewCSharp8Features
 
 			int CanCaptureLocal() => value;
 
-			static int CannotCaptureLocal() => new Random().Next();
+			static int CannotCaptureLocal() => new Random().Next();			
+			//static int CannotCaptureLocal() => value;  // No No
 
 			Console.WriteLine($"{nameof(value)} - {CanCaptureLocal()}");
 			Console.WriteLine($"{nameof(CanCaptureLocal)} - {CanCaptureLocal()}");

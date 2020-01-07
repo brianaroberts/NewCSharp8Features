@@ -1,4 +1,6 @@
-﻿namespace NewCSharp8Features
+﻿using System;
+
+namespace NewCSharp8Features
 {
 	// https://github.com/dotnet/csharplang/blob/master/proposals/default-interface-methods.md
 	public static class InterfaceMembers
@@ -7,7 +9,8 @@
 		{
 			// Call an interface property
 			IService.StoreAValue = 100; 
-			var service = new Service();
+			Service service = new Service();
+			Console.WriteLine(IService.StoreAValue); 
 			service.DoAThing();
 
 			IService iService = new Service();

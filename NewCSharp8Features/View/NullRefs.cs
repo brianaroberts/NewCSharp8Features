@@ -5,12 +5,12 @@ using System.Reflection;
 
 namespace NewCSharp8Features
 {
-	// https://github.com/dotnet/csharplang/blob/master/proposals/csharp-8.0/nullable-reference-types.md
-	public static class NullRefs
-	{
-		public static void Demo()
-		{
-			var person = new Person { Id = Guid.NewGuid()/*, Name = "Jason"*/ };
+   // https://github.com/dotnet/csharplang/blob/master/proposals/csharp-8.0/nullable-reference-types.md
+   public static class NullRefs
+   {
+	  public static void Demo()
+	  {
+		 var person = new Person { Id = Guid.NewGuid()/*, Name = "Batman"*/ };
 
 			Console.WriteLine($"{person.Name?.Length}, {person.Id}");
 		}
