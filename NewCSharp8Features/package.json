@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "tsd": "^0.11.0"
+    "tsd": "^0.28.1"
   },
   "devDependencies": {},
   "scripts": {
